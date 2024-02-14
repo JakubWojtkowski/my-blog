@@ -3,7 +3,9 @@ import { client, urlFor } from "@/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 
-async function getData(slug: string) {
+export const revalidate = 30;
+
+async function fetchArticleData(slug: string) {
   const query = `*[_type == "blog" && slug.current == "${slug}"] {
         "currentSlug": slug.current,
         title,
@@ -21,7 +23,7 @@ export default async function BlogArticle({
 }: {
   params: { slug: string };
 }) {
-  const data: FullBlog = await getData(params.slug);
+  const data: FullBlog = await fetchArticleData(params.slug);
 
   return (
     <div className="mt-8">
