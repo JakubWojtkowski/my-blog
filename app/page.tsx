@@ -24,7 +24,7 @@ export default async function Home() {
 
   console.log(data);
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 mt-5">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mt-5 gap-5">
       {data.map((post, index) => (
         <Card key={index}>
           <Image
@@ -32,7 +32,7 @@ export default async function Home() {
             alt={post.title}
             width={500}
             height={500}
-            className="rounded-t-lg h-[200px] object-cover gap-5 "
+            className="rounded-t-lg h-[200px] object-cover"
           />
           <CardContent className="mt-5">
             <h3 className="text-lg line-clamp-2 font-bold">{post.title}</h3>
