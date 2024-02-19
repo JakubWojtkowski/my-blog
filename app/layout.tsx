@@ -4,8 +4,8 @@ import { ThemeProvider } from "./components/theme-provider";
 import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "improveu",
+  description: "improveu | built yourself today",
 };
 
 export default function RootLayout({
