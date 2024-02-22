@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
     <div>
-      <h1>improveu</h1>
+      <h1 className="">improveu</h1>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

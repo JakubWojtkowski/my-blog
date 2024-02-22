@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
@@ -24,8 +25,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <Footer />
+          <Hero />
           <main className="max-w-4xl mx-auto px-4">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
