@@ -1,11 +1,14 @@
-import React from "react";
-
-function Footer() {
+export default function Footer() {
   return (
     <div>
-      <h1 className="">improveu</h1>
+      <bigText>improveu</bigText>
+      <span>connect</span>
+      <div>
+        <span>
+          Local time <br /> 2:59 AM GMT+0
+        </span>
+        <span>© 2024 Created by Jakub Wojtkowski</span>
+      </div>
     </div>
   );
 }
-
-export default Footer;

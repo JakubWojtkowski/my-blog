@@ -1,12 +1,11 @@
 import Image from "next/image";
-import React from "react";
 
-function Hero() {
+export default function Hero() {
   return (
-    <div className="w-full flex flex-col max-w-4xl mx-auto px-4 py-5 h-full">
+    <div className="w-full flex flex-col max-w-4xl mx-auto py-5 h-full">
       <h1 className="font-bold text-8xl flex-1 leading-4">
         Built yourself today with
-        <span className="italic underline"> improveu</span>
+        <span className="underline italic"> improveu</span>
       </h1>
 
       <div>
@@ -29,5 +28,3 @@ function Hero() {
     </div>
   );
 }
-
-export default Hero;
