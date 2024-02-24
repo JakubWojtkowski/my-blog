@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="w-full flex flex-col max-w-4xl mx-auto py-5 h-full">
-      <h1 className="font-bold text-8xl flex-1 leading-4">
+    <div>
+      <h1>
         Built yourself today with
-        <span className="underline italic"> improveu</span>
+        <span> improveu</span>
       </h1>
 
       <div>
