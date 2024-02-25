@@ -2,7 +2,11 @@
 
 import { ThemeProvider } from "./components/theme-provider";
 import Navbar from "./components/Navbar";
-import "./globals.css";
+
+// export const metadata: Metadata = {
+//   title: "improveu",
+//   description: "improveu | built yourself today",
+// };
 
 export default function RootLayout({
   children,

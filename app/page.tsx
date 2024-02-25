@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import "./globals.css";
 
 export const revalidate = 30;
 
