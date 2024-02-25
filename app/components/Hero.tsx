@@ -41,7 +41,7 @@ export default function Hero() {
         </p>
       </div>
 
-      <span className="text-center text-sm">( scroll )</span>
+      <span className="text-center text-base">( scroll )</span>
     </div>
   );
 }
