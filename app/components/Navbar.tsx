@@ -3,11 +3,8 @@ import { ModeToggle } from "./ModeToggle";
 
 export default function Navbar() {
   return (
-    <nav className="w-full relative flex items-center justify-between max-w-4xl mx-auto px-4 py-5">
-      <Link
-        href={"/"}
-        className="font-bold text-3xl text-primary tracking-tighter"
-      >
+    <nav className="w-full max-w-4xl mx-auto flex justify-between py-8">
+      <Link href={"/"} className="text-3xl tracking-tighter font-bold">
         improveu
       </Link>
 

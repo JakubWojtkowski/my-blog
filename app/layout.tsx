@@ -1,14 +1,8 @@
-import type { Metadata } from "next";
-import "./globals.css";
+"use client";
+
 import { ThemeProvider } from "./components/theme-provider";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-
-export const metadata: Metadata = {
-  title: "improveu",
-  description: "improveu | built yourself today",
-};
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -25,9 +19,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <Hero />
-          <main className="max-w-4xl mx-auto px-4">{children}</main>
-          <Footer />
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
