@@ -7,6 +7,7 @@ import Link from "next/link";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import "./globals.css";
+import { ArrowDownRightSquare } from "lucide-react";
 
 export const revalidate = 30;
 
@@ -30,23 +31,41 @@ export default async function Home() {
   return (
     <div className="grid grid-cols-1 mt-5 gap-16">
       <Hero />
-      <div className="max-w-4xl mx-auto px-4 pt-4">
-        <h2 className="text-center font-bold tracking-tighter text-5xl pb-10">
+
+      <div className="w-full max-w-4xl mx-auto pt-4">
+        <h2 className="text-center font-bold tracking-tighter text-5xl pb-8">
           Latest posts
         </h2>
+
+        <ul className="flex flex-1 justify-center items-center gap-4 text-base">
+          <li>all</li>
+          <li>nutrition</li>
+          <li>self-development</li>
+          <li>mental health</li>
+        </ul>
+
         {data.map((post, index) => (
-          <Card key={index} className="flex py-4">
+          <Card
+            key={index}
+            className="flex-1 flex py-8 gap-8 border-b-2 border-gray-200 dark:border-gray-600"
+          >
             <Image
               src={urlFor(post.titleImage).url()}
               alt={post.title}
               width={400}
-              height={400}
-              className="rounded-t-lg h-[200px] object-cover"
+              height={200}
+              className="rounded-lg h-[200px] object-cover"
             />
-            <CardContent className="mt-5">
-              <p className="text-sm">Feb 21, 2024</p>
-              <h3 className="text-xl font-bold">{post.title}</h3>
-              <Button asChild className=" mt-7">
+            <CardContent className="flex flex-col justify-end gap-4 flex-1 p-0">
+              <p className="text-base text-gray-600 dark:text-gray-300">
+                Feb 21, 2024
+              </p>
+              <h3 className="text-2xl font-bold cursor-pointer">
+                {post.title.length >= 36
+                  ? post.title.slice(0, 36).concat("...")
+                  : post.title}
+              </h3>
+              <Button asChild className="mt-8">
                 <Link href={`/blog/${post.currentSlug}`}>Read more</Link>
               </Button>
             </CardContent>

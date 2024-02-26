@@ -25,10 +25,10 @@ export default function Hero() {
             height={210}
             className="rounded-md cursor-pointer"
           />
-          <p className="text-lg font-semibold text-gray-600">
+          <p className="text-base font-semibold text-gray-600 dark:text-gray-400">
             The goal is simple: Be better than yesterday
           </p>
-          <ArrowDownRightSquare className="text-gray-600" />
+          <ArrowDownRightSquare className="text-gray-600 dark:text-gray-400" />
         </div>
       </div>
 
