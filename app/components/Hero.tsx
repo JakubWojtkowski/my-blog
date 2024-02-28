@@ -1,6 +1,6 @@
-import { ArrowDownRight, ArrowDownRightSquare } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 import Image from "next/image";
-
+import Marquee from "react-fast-marquee";
 
 export default function Hero() {
   return (
@@ -34,12 +34,21 @@ export default function Hero() {
       </div>
 
       <div>
-        <p className="text-lg">
-          Latest post: Feb 21, 2024 -{" "}
-          <span className="font-semibold">
-            The goal is simple: Be better than yesterday
-          </span>
-        </p>
+        <Marquee>
+          {" "}
+          <p className="text-lg">
+            Latest post: Feb 21, 2024 -{" "}
+            <span className="font-semibold">
+              The goal is simple: Be better than yesterday
+            </span>
+          </p>
+          <p className="text-lg">
+            Latest post: Feb 21, 2024 -{" "}
+            <span className="font-semibold">
+              The goal is simple: Be better than yesterday
+            </span>
+          </p>
+        </Marquee>
       </div>
 
       <span className="text-center text-base">( scroll )</span>
