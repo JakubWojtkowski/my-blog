@@ -5,14 +5,19 @@ export default function Footer() {
         improveu
       </h1>
       <div className="flex flex-col">
-        <span className="text-right text-base tracking-tight hover:underline cursor-pointer">
-          connect
+        <span className="text-right text-base tracking-tight hover:underline cursor-pointer transition-opacity">
+          <a href="mailto:jvkub.wojtkowski@gmail.com">connect</a>
         </span>
         <div className="flex flex-row justify-between items-end text-base tracking-tight">
           <span>
             Local time <br /> 2:59 AM GMT+0
           </span>
-          <span>© 2024 Created by Jakub Wojtkowski</span>
+          <span>
+            Created by{" "}
+            <a href="https://github.com/JakubWojtkowski" target="_blank">
+              Jakub Wojtkowski '24
+            </a>
+          </span>
         </div>
       </div>
     </div>

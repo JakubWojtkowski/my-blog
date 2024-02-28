@@ -4,7 +4,8 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import "../../globals.css";
 import Footer from "@/app/components/Footer";
-import { Facebook, Linkedin, Twitter, X } from "lucide-react";
+import { Facebook, Linkedin, MoveLeft, Twitter, X } from "lucide-react";
+import Link from "next/link";
 
 export const revalidate = 30;
 
@@ -31,8 +32,13 @@ export default async function BlogArticle({
   return (
     <div>
       <div className="mt-8 max-w-4xl w-full mx-auto">
+        <button className="mt-8 flex gap-2">
+          <Link href={`/`}>
+            <MoveLeft className="w-9 h-9" />
+          </Link>
+        </button>
         <h1 className="flex flex-col gap-2">
-          <span className="text-base text-center text-primary tracking-wide font-semibold rounded-lg">
+          <span className="text-base text-center text-primary font-semibold rounded-lg">
             Self-development
           </span>
           <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
@@ -65,9 +71,9 @@ export default async function BlogArticle({
             <div className="flex flex-col gap-2">
               <span className="text-base">( Share )</span>
               <div className="flex gap-2">
-                <Linkedin />
-                <Twitter />
-                <Facebook />
+                <Linkedin className="cursor-pointer" />
+                <Twitter className="cursor-pointer" />
+                <Facebook className="cursor-pointer" />
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ import Link from "next/link";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import "./globals.css";
-import { ArrowDownRightSquare } from "lucide-react";
+import { ArrowDownRight, ArrowDownRightSquare } from "lucide-react";
 
 export const revalidate = 30;
 
@@ -65,8 +65,10 @@ export default async function Home() {
                   ? post.title.slice(0, 36).concat("...")
                   : post.title}
               </h3>
-              <Button asChild className="mt-8">
-                <Link href={`/blog/${post.currentSlug}`}>Read more</Link>
+              <Button asChild className="mt-8 flex gap-2">
+                <Link href={`/blog/${post.currentSlug}`}>
+                  Read more <ArrowDownRight className="h-5 w-5" />
+                </Link>
               </Button>
             </CardContent>
           </Card>
