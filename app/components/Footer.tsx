@@ -15,7 +15,7 @@ export default function Footer() {
           <span>
             Created by{" "}
             <a href="https://github.com/JakubWojtkowski" target="_blank">
-              Jakub Wojtkowski '24
+              Jakub Wojtkowski {"'"}24
             </a>
           </span>
         </div>
