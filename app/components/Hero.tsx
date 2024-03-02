@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 export default function Hero() {
   return (
-    <div className="w-full flex flex-col max-w-4xl mx-auto py-4 h-full gap-8">
+    <div className="w-full flex flex-col max-w-4xl mx-auto py-4 h-full gap-8 px-8 lg:px-0">
       <h1 className="font-bold text-8xl flex-1">
         Built yourself today with
         <span className="border-b-8 dark:border-light border-dark italic tracking-tighter font-normal">

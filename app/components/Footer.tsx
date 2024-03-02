@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div className="flex flex-col w-full px-16 py-4 mx-auto bg-dark text-lightBackground">
-      <h1 className="text-center text-[360px] tracking-[-38px] font-bold">
+      <h1 className="text-center sm:text-[140px] sm:tracking-[-14px] md:text-[180px] md:tracking-[-20px] lg:text-[240px] lg:tracking-[-26px] xl:text-[320px] xl:tracking-[-32px] 2xl:text-[360px] 2xl:tracking-[-38px] font-bold">
         improveu
       </h1>
       <div className="flex flex-col">

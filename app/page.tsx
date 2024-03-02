@@ -32,7 +32,7 @@ export default async function Home() {
     <div className="grid grid-cols-1 mt-5 gap-16">
       <Hero />
 
-      <div className="w-full max-w-4xl mx-auto pt-4">
+      <div className="w-full max-w-4xl mx-auto pt-4 px-8 lg:px-0">
         <h2 className="text-center font-bold tracking-tighter text-5xl pb-8">
           Latest posts
         </h2>

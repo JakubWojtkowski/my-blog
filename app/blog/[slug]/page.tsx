@@ -31,7 +31,7 @@ export default async function BlogArticle({
 
   return (
     <div>
-      <div className="mt-8 max-w-4xl w-full mx-auto">
+      <div className="mt-8 max-w-4xl w-full mx-auto px-8 lg:px-0">
         <button className="mt-8 flex gap-2">
           <Link href={`/`}>
             <MoveLeft className="w-9 h-9" />
