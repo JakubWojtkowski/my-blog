@@ -33,7 +33,7 @@ export default async function Home() {
       <Hero />
 
       <div className="w-full max-w-4xl mx-auto pt-4 px-8 lg:px-0">
-        <h2 className="text-center font-bold tracking-tighter text-5xl pb-8">
+        <h2 className="text-center font-bold tracking-tighter text-4xl md:text-5xl pb-8">
           Latest posts
         </h2>
 
@@ -55,7 +55,7 @@ export default async function Home() {
         {data.map((post, index) => (
           <Card
             key={index}
-            className="flex-1 flex py-8 gap-8 border-b-2 border-gray-200 dark:border-gray-600"
+            className="flex-1 flex flex-col sm:flex-row py-8 gap-8 border-b-2 border-gray-200 dark:border-gray-600"
           >
             <Image
               src={urlFor(post.titleImage).url()}
@@ -64,7 +64,7 @@ export default async function Home() {
               height={200}
               className="rounded-lg h-[200px] object-cover"
             />
-            <CardContent className="flex flex-col justify-end gap-4 flex-1 p-0">
+            <CardContent className="flex flex-col justify-end gap-1 sm:gap-2 flex-1 p-0">
               <p className="text-base text-gray-600 dark:text-gray-300">
                 Feb 21, 2024
               </p>
