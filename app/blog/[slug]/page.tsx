@@ -32,11 +32,6 @@ export default async function BlogArticle({
   return (
     <div>
       <div className="mt-8 max-w-4xl w-full mx-auto px-8 lg:px-0">
-        <button className="mt-8 flex gap-2">
-          <Link href={`/`}>
-            <MoveLeft className="w-9 h-9" />
-          </Link>
-        </button>
         <h1 className="flex flex-col gap-2">
           <span className="text-base text-center text-primary font-semibold rounded-lg">
             Self-development
@@ -58,14 +53,14 @@ export default async function BlogArticle({
           priority
         />
 
-        <div className="flex gap-4 relative my-8">
-          <div className="flex flex-col gap-1 sticky top-0 py-2 left-0 h-32 text-base border-t-2 border-dark dark:border-lightBackground">
+        <div className="flex md:gap-4 relative my-8">
+          <div className="flex flex-col gap-1 sticky top-0 py-2 left-0 h-32 basis-40 shrink-0 text-sm md:text-base border-t-2 border-dark dark:border-lightBackground">
             <span className="">Written by</span>
             <span className="font-semibold">@Jakub Wojtkowski</span>
             <span>Feb 21, 2024</span>
           </div>
 
-          <div className="prose prose-blue prose-xl dark:prose-invert pl-16">
+          <div className="prose prose-blue md:prose-xl dark:prose-invert pl-8 lg:pl-16">
             <PortableText value={data.content} />
 
             <div className="flex flex-col gap-2">

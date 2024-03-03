@@ -7,7 +7,8 @@ import Link from "next/link";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import "./globals.css";
-import { ArrowDownRight, ArrowDownRightSquare } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
+import Menu from "./components/Menu";
 
 export const revalidate = 30;
 
@@ -37,20 +38,7 @@ export default async function Home() {
           Latest posts
         </h2>
 
-        <ul className="flex flex-1 justify-center items-center gap-4 text-base">
-          <li className="after:content-[''] after:absolute after:bg-light after:h-[3px] after:rounded-lg after:w-0 left-0 after:bottom-[-10px] hover:after:w-full after:transition-[500ms] cursor-pointer relative">
-            all
-          </li>
-          <li className="after:content-[''] after:absolute after:bg-light after:h-[3px] after:rounded-lg after:w-0 left-0 after:bottom-[-10px] hover:after:w-full after:transition-[500ms] cursor-pointer relative">
-            nutrition
-          </li>
-          <li className="after:content-[''] after:absolute after:bg-light after:h-[3px] after:rounded-lg after:w-0 left-0 after:bottom-[-10px] hover:after:w-full after:transition-[500ms] cursor-pointer relative">
-            self-development
-          </li>
-          <li className="after:content-[''] after:absolute after:bg-light after:h-[3px] after:rounded-lg after:w-0 left-0 after:bottom-[-10px] hover:after:w-full after:transition-[500ms] cursor-pointer relative">
-            mental health
-          </li>
-        </ul>
+        <Menu />
 
         {data.map((post, index) => (
           <Card
