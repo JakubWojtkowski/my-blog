@@ -13,7 +13,7 @@ export default function Hero() {
         </span>
       </h1>
 
-      <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-6">
+      <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-8 sm:mt-6">
         <p className="text-center text-base sm:text-left sm:text-lg leading-8">
           The <span className="italic">improveu</span> is your destination for<br></br>
           self-development and personal growth
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="flex flex-col sm:items-end items-center gap-1">
           <Image
             src="https://i.pinimg.com/originals/5a/4d/dc/5a4ddcf0f283e07719d52b81a13f201b.jpg"
-            alt="image"
+            alt="blog's image"
             width={210}
             height={210}
             className="rounded-md cursor-pointer sm:w-[180px] md:w-[210px]"
@@ -37,16 +37,15 @@ export default function Hero() {
       </div>
 
       <div>
-        <Marquee>
-          {" "}
+        <Marquee gradient={true} gradientColor="" gradientWidth={75} speed={30}>
           <p className="text-base md:text-lg">
             Latest post: Feb 21, 2024 -{" "}
             <span className="font-semibold">
-              The goal is simple: Be better than yesterday
+              The goal is simple: Be better than yesterday{" "}
             </span>
           </p>
           <p className="text-lg">
-            Latest post: Feb 21, 2024 -{" "}
+            {" "}Latest post: Feb 21, 2024 -{" "}
             <span className="font-semibold">
               The goal is simple: Be better than yesterday
             </span>

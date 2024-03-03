@@ -4,7 +4,7 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import "../../globals.css";
 import Footer from "@/app/components/Footer";
-import { Facebook, Linkedin, MoveLeft, Twitter, X } from "lucide-react";
+import { Facebook, FacebookIcon, Linkedin, MoveLeft, Twitter, X } from "lucide-react";
 import Link from "next/link";
 
 export const revalidate = 30;
@@ -53,26 +53,26 @@ export default async function BlogArticle({
           priority
         />
 
-        <div className="flex md:gap-4 relative my-8">
-          <div className="flex flex-col gap-1 sticky top-0 py-2 left-0 h-32 basis-40 shrink-0 text-sm md:text-base border-t-2 border-dark dark:border-lightBackground">
+        <div className="flex flex-col sm:flex-row gap-4 relative my-8">
+          <div className="flex flex-col gap-1 py-2 sm:basis-40 shrink-0 text-sm md:text-base border-t-2 border-dark dark:border-lightBackground">
             <span className="">Written by</span>
             <span className="font-semibold">@Jakub Wojtkowski</span>
             <span>Feb 21, 2024</span>
           </div>
 
-          <div className="prose prose-blue md:prose-xl dark:prose-invert pl-8 lg:pl-16">
+          <div className="prose prose-blue md:prose-xl dark:prose-invert sm:pl-8 lg:pl-16">
             <PortableText value={data.content} />
 
             <div className="flex flex-col gap-2">
-              <span className="text-base">( Share )</span>
+              <span className="text-sm sm:text-base">( Share )</span>
               <div className="flex gap-2">
-                <Linkedin className="cursor-pointer" />
-                <Twitter className="cursor-pointer" />
-                <Facebook className="cursor-pointer" />
+                <Linkedin strokeWidth={1} className="cursor-pointer" />
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore text-light"><Facebook strokeWidth={1} /></a>
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
       <Footer />
