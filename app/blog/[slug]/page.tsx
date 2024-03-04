@@ -66,8 +66,8 @@ export default async function BlogArticle({
             <div className="flex flex-col gap-2">
               <span className="text-sm sm:text-base">( Share )</span>
               <div className="flex gap-2">
-                <Linkedin strokeWidth={1} className="cursor-pointer" />
-                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore text-light"><Facebook strokeWidth={1} /></a>
+                <Linkedin strokeWidth={1} className="cursor-pointer dark:text-light text-dark" />
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore dark:text-light text-dark"><Facebook strokeWidth={1} /></a>
               </div>
             </div>
           </div>

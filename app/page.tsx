@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import "./globals.css";
 import { ArrowDownRight } from "lucide-react";
 import Menu from "./components/Menu";
+import DropdownMenu from "./components/DropdownMenu";
 
 export const revalidate = 30;
 
@@ -30,7 +31,7 @@ export default async function Home() {
   const data: BlogCard[] = await fetchData();
 
   return (
-    <div className="grid grid-cols-1 mt-5 gap-16">
+    <div className="grid grid-cols-1 mt-4 gap-12">
       <Hero />
 
       <div className="w-full max-w-4xl mx-auto pt-4 px-8 lg:px-0">
@@ -39,6 +40,7 @@ export default async function Home() {
         </h2>
 
         <Menu />
+        <DropdownMenu />
 
         {data.map((post, index) => (
           <Card
@@ -61,7 +63,7 @@ export default async function Home() {
                   ? post.title.slice(0, 36).concat("...")
                   : post.title}
               </h3>
-              <Button asChild className="mt-8 flex gap-2">
+              <Button asChild className="mt-8 flex gap-2 font-semibold">
                 <Link href={`/blog/${post.currentSlug}`}>
                   Read more <ArrowDownRight className="h-5 w-5" />
                 </Link>

@@ -3,10 +3,6 @@ import Navbar from "./components/Navbar";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  // icons: {
-  //   icon: "https://example.com/icon.png",
-  //   apple: "https://example.com/apple-icon.png"
-  // },
   title: "improveu",
   description: "improveu | built yourself today",
 };
@@ -26,7 +22,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main>{children}</main>
+          <main >{children}</main>
         </ThemeProvider>
       </body>
     </html>
