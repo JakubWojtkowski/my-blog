@@ -25,6 +25,7 @@ export default function Hero() {
             alt="blog's image"
             width={210}
             height={210}
+            sizes="(max-width: 425px) 240px, 240px"
             className="rounded-md cursor-pointer sm:w-[180px] md:w-[210px]"
           />
           <div className="flex flex-col gap-1 items-end">
