@@ -19,29 +19,29 @@ export default function Hero() {
           self-development and personal growth
         </p>
 
-        <div className="flex flex-col sm:items-end items-center gap-1">
+        <div className="flex flex-col sm:items-end items-center gap-1 sm:w-full w-[220px]">
           <Image
             src="https://i.pinimg.com/originals/5a/4d/dc/5a4ddcf0f283e07719d52b81a13f201b.jpg"
             alt="blog's image"
-            width={210}
+            width={220}
             height={210}
             sizes="(max-width: 425px) 240px, 240px"
-            className="rounded-md cursor-pointer sm:w-[180px] md:w-[210px]"
+            className="rounded-md cursor-pointer sm:w-[230px]"
           />
-          <div className="flex flex-col gap-1 items-end">
+          <div className="flex flex-col sm:gap-1 items-end">
             <p className="text-base text-center sm:text-left font-semibold text-gray-600 dark:text-gray-400">
               The goal is simple: Be better than yesterday
             </p>
-            <ArrowDownRight className="text-gray-600 dark:text-gray-400 cursor-pointer" />
+            <ArrowDownRight className="-mt-2 sm:mt-0 text-gray-600 dark:text-gray-400 cursor-pointer" />
           </div>
         </div>
       </div>
 
       <div>
-        <Marquee gradient={true} gradientColor="" gradientWidth={75} speed={30}>
+        <Marquee speed={30}>
           <p className="text-base md:text-lg">
             Latest post: Feb 21, 2024 -{" "}
-            <span className="font-semibold">
+            <span className="font-bold">
               The goal is simple: Be better than yesterday{" "}
             </span>
           </p>
