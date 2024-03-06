@@ -1,16 +1,20 @@
-// "use client";
+"use client";
 
 import { ArrowDownRight } from "lucide-react";
 import Image from "next/image";
+import { useEffect } from "react";
 import Marquee from "react-fast-marquee";
-import { motion, useInView } from "framer-motion";
-import { slideUp, opacity } from "../anim";
-import { useRef } from "react";
 
 export default function Hero() {
-  // const container = useRef(null);
-  // const isInView = useInView(container);
-  // const phrase = "Built yourself today with improveu";
+
+  useEffect(() => {
+    (
+      async () => {
+        const LocomotiveScroll = (await import("locomotive-scroll")).default;
+        const locomotiveScroll = new LocomotiveScroll;
+      }
+    )();
+  }, []);
 
   return (
     <div className="w-full flex flex-col max-w-4xl mx-auto py-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
@@ -20,15 +24,9 @@ export default function Hero() {
           {" "}
           improveu
         </span>
-        {/* {
-          phrase.split(" ").map((word, index) => {
-            return <span key={index}><motion.span variants={slideUp}
-              initial="initial" animate={isInView ? "open" : "closed"}>{word}</motion.span></span>
-          })
-        } */}
       </h1>
 
-      <div data-scroll data-scroll-speed="0.3" className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-8 sm:mt-6">
+      <div  className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-8 sm:mt-6">
         <p className="text-center text-base sm:text-left sm:text-lg leading-8">
           The <span className="italic">improveu</span> is your destination for<br></br>
           self-development and personal growth
