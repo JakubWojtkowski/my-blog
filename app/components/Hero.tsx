@@ -7,14 +7,14 @@ import Marquee from "react-fast-marquee";
 
 export default function Hero() {
 
-  useEffect(() => {
-    (
-      async () => {
-        const LocomotiveScroll = (await import("locomotive-scroll")).default;
-        const locomotiveScroll = new LocomotiveScroll;
-      }
-    )();
-  }, []);
+  // useEffect(() => {
+  //   (
+  //     async () => {
+  //       const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //       const locomotiveScroll = new LocomotiveScroll;
+  //     }
+  //   )();
+  // }, []);
 
   return (
     <div className="w-full flex flex-col max-w-4xl mx-auto py-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
@@ -26,7 +26,7 @@ export default function Hero() {
         </span>
       </h1>
 
-      <div  className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-8 sm:mt-6">
+      <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-8 sm:mt-6">
         <p className="text-center text-base sm:text-left sm:text-lg leading-8">
           The <span className="italic">improveu</span> is your destination for<br></br>
           self-development and personal growth
