@@ -55,7 +55,7 @@ export default function Hero({ post }: Props) {
               width={230}
               height={210}
               sizes="(max-width: 425px) 240px, 240px"
-              className="rounded-md cursor-pointer sm:w-[230px] h-[160px] sm:h-[170px]"
+              className="rounded-md cursor-pointer sm:w-[230px] h-[160px] sm:h-[170px] object-contain"
             /></Reveal>
 
           <Reveal>
