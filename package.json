@@ -39,6 +39,7 @@
     "@sanity/eslint-config-studio": "3.0.1",
     "@swc/plugin-styled-components": "^1.5.118",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/locomotive-scroll": "^4.1.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

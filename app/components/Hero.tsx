@@ -7,14 +7,14 @@ import Marquee from "react-fast-marquee";
 
 export default function Hero() {
 
-  // useEffect(() => {
-  //   (
-  //     async () => {
-  //       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-  //       const locomotiveScroll = new LocomotiveScroll;
-  //     }
-  //   )();
-  // }, []);
+  useEffect(() => {
+    (
+      async () => {
+        const LocomotiveScroll = (await import("locomotive-scroll")).default;
+        const locomotiveScroll = new LocomotiveScroll;
+      }
+    )();
+  }, []);
 
   return (
     <div className="w-full flex flex-col max-w-4xl mx-auto py-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
