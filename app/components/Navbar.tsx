@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
+import { Opacity } from "../animations/Opacity";
 
 export default function Navbar() {
   return (
