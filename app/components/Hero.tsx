@@ -20,7 +20,7 @@ export default function Hero() {
     <div className="sticky left-0 top-0 -z-10 w-full flex flex-col max-w-4xl mx-auto py-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
       <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 z-10">
         Built yourself today with
-        <span className="border-b-8 dark:border-light border-dark italic tracking-tighter font-normal">
+        <span className="border-b-8 dark:border-light border-dark italic tracking-tighter">
           {" "}
           improveu
         </span>

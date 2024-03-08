@@ -34,7 +34,7 @@ export default async function Home() {
     <div className="grid grid-cols-1 mt-4 min-h-[100vh]">
       <Hero />
 
-      <div className="z-10 w-full max-w-4xl mx-auto md:pt-8 px-8 lg:px-0 min-h-[100vh] bg-lightBackground dark:bg-darkBackground border-t-4 rounded">
+      <div className="z-10 w-full max-w-4xl mx-auto py-8 px-8 lg:px-0 min-h-[100vh] bg-lightBackground dark:bg-darkBackground border-t-4 rounded">
         <h2 className="text-center font-bold tracking-tighter text-4xl md:text-5xl pb-2">
           Articles
         </h2>
