@@ -25,7 +25,7 @@ export default function Hero({ post }: Props) {
   }, []);
 
   return (
-    <div className="sticky left-0 top-0 -z-10 w-full flex flex-col max-w-4xl mx-auto pb-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
+    <div className="sticky left-0 top-0 -z-10 pt-8 w-full flex flex-col max-w-4xl mx-auto pb-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
       <Reveal>
         <div className="py-3">
           <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 z-10">
@@ -52,10 +52,10 @@ export default function Hero({ post }: Props) {
             <Image
               src={urlFor(post[0].titleImage).url()}
               alt="blog's image"
-              width={210}
+              width={230}
               height={210}
               sizes="(max-width: 425px) 240px, 240px"
-              className="rounded-md cursor-pointer sm:w-[230px] sm:h-[170px]"
+              className="rounded-md cursor-pointer sm:w-[230px] h-[160px] sm:h-[170px]"
             /></Reveal>
 
           <Reveal>
