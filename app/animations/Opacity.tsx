@@ -27,7 +27,7 @@ export const Opacity = ({ children, width = "fit-content" }: Props) => {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 1, delay: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
             >
                 {children}
             </motion.div>
