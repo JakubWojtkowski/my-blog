@@ -11,7 +11,7 @@ export default function Navbar() {
 
       <Link href={"/"} className="flex flex-col gap-16 text-2xl sm:text-3xl tracking-tighter font-bold relative">
         improveu
-        <span className="pb-0.5 absolute text-sm sm:text-base bottom-[-16px] sm:bottom-[-24px] tracking-tight right-0 border-2 dark:border-light border-dark rounded-lg px-2">
+        <span className="pb-0.5 absolute text-sm sm:text-base bottom-[-16px] sm:bottom-[-24px] tracking-tight right-0 border-2 border-slate-500 rounded-lg px-2 text-slate-500">
           blog
         </span>
       </Link>

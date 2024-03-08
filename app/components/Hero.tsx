@@ -5,8 +5,15 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { Reveal } from "../animations/Reveal";
+import { BlogCard } from "@/lib/interface";
+import { urlFor } from "@/lib/sanity";
+import Link from "next/link";
 
-export default function Hero() {
+type Props = {
+  post: BlogCard[];
+};
+
+export default function Hero({ post }: Props) {
 
   useEffect(() => {
     (
@@ -22,8 +29,8 @@ export default function Hero() {
       <Reveal>
         <div className="py-3">
           <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 z-10">
-            Built yourself today with
-            <span className="border-b-8 dark:border-light border-dark italic tracking-tighter">
+            Built <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500">yourself</span> today with
+            <span className="dark:border-light border-dark tracking-tighter italic">
               {" "}
               improveu
             </span>
@@ -43,19 +50,19 @@ export default function Hero() {
         <div className="flex flex-col sm:items-end items-center gap-1 sm:w-full w-[220px]">
           <Reveal>
             <Image
-              src="https://i.pinimg.com/originals/5a/4d/dc/5a4ddcf0f283e07719d52b81a13f201b.jpg"
+              src={urlFor(post[0].titleImage).url()}
               alt="blog's image"
               width={210}
               height={210}
               sizes="(max-width: 425px) 240px, 240px"
-              className="rounded-md cursor-pointer sm:w-[230px]"
+              className="rounded-md cursor-pointer sm:w-[230px] sm:h-[170px]"
             /></Reveal>
 
           <Reveal>
             <div className="flex flex-col sm:gap-1 items-end">
-              <p className="text-base text-center sm:text-left font-semibold text-gray-600 dark:text-gray-400">
-                The goal is simple: Be better than yesterday
-              </p>
+              <Link href={`/blog/${post[0].currentSlug}`} className="text-base text-center sm:text-left font-semibold text-gray-600 dark:text-gray-400">
+                {post[0].title}
+              </Link>
               <ArrowDownRight className="-mt-2 sm:mt-0 text-gray-600 dark:text-gray-400 cursor-pointer" />
             </div>
           </Reveal>
@@ -68,13 +75,10 @@ export default function Hero() {
             <p className="text-base md:text-lg">
               Latest post: Feb 21, 2024 -{" "}
               <span className="font-bold">
-                The goal is simple: Be better than yesterday{" "}
+                {post[0].title} - {" "}
               </span>
-            </p>
-            <p className="text-lg">
-              {" "}Latest post: Feb 21, 2024 -{" "}
-              <span className="font-semibold">
-                The goal is simple: Be better than yesterday
+              <span className="pr-1">
+                {post[0].description.slice(0, 30).concat("...")}
               </span>
             </p>
           </Marquee>
