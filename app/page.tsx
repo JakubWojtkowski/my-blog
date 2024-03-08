@@ -31,10 +31,10 @@ export default async function Home() {
   const data: BlogCard[] = await fetchData();
 
   return (
-    <div className="grid grid-cols-1 mt-4 gap-12">
+    <div className="grid grid-cols-1 mt-4 min-h-[100vh]">
       <Hero />
 
-      <div className="w-full max-w-4xl mx-auto md:pt-8 px-8 lg:px-0 min-h-[100vh]">
+      <div className="z-10 w-full max-w-4xl mx-auto md:pt-8 px-8 lg:px-0 min-h-[100vh] bg-lightBackground dark:bg-darkBackground border-t-4 rounded">
         <h2 className="text-center font-bold tracking-tighter text-4xl md:text-5xl pb-2">
           Articles
         </h2>
@@ -45,7 +45,7 @@ export default async function Home() {
         {data.map((post, index) => (
           <Card
             key={index}
-            className="flex-1 flex flex-col sm:flex-row py-8 gap-8 border-b-2 border-gray-200 dark:border-gray-600"
+            className="flex-1 flex flex-col sm:flex-row py-8 gap-8 border-b-2 border-gray-200 dark:border-gray-700 "
           >
             <Image
               src={urlFor(post.titleImage).url()}
@@ -66,7 +66,7 @@ export default async function Home() {
                   ? post.title.slice(0, 36).concat("...")
                   : post.title}
               </h3>
-              <Button asChild className="mt-8 flex gap-2 font-semibold">
+              <Button asChild className="mt-8 flex gap-2 font-semibold bg-darkBackground dark:bg-lightBackground">
                 <Link href={`/blog/${post.currentSlug}`}>
                   Read more <ArrowDownRight className="h-5 w-5" />
                 </Link>
