@@ -8,7 +8,6 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import "./globals.css";
 import { ArrowDownRight } from "lucide-react";
-// import Menu from "./components/Menu";
 import DropdownMenu from "./components/DropdownMenu";
 
 export const revalidate = 30;
@@ -38,9 +37,6 @@ export default async function Home() {
         <h2 className="text-center font-bold tracking-tighter text-4xl md:text-5xl pb-2">
           Articles
         </h2>
-
-        {/* <Menu /> */}
-        {/* <DropdownMenu /> */}
 
         {data.map((post, index) => (
           <Card
