@@ -25,7 +25,7 @@ export default function Hero({ post }: Props) {
   }, []);
 
   return (
-    <div className="sticky left-0 top-0 -z-10 pt-4 w-full flex flex-col max-w-4xl mx-auto pb-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
+    <div className="sticky left-0 top-0 pt-6 sm:pt-0 -z-10 w-full flex flex-col max-w-4xl mx-auto pb-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
       <Reveal>
         <div className="py-3">
           <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 z-10">
@@ -38,7 +38,7 @@ export default function Hero({ post }: Props) {
       </Reveal>
 
 
-      <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-8 sm:mt-6">
+      <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-4 sm:mt-6">
         <Reveal>
           <p className="pl-1 text-center text-base sm:text-left sm:text-lg leading-8">
             The <span className="italic">improveu</span> is your destination for<br></br>
