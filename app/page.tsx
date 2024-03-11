@@ -8,7 +8,6 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import "./globals.css";
 import { ArrowDownRight } from "lucide-react";
-import DropdownMenu from "./components/DropdownMenu";
 
 export const revalidate = 30;
 

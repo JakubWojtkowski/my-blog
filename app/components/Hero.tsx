@@ -41,13 +41,13 @@ export default function Hero({ post }: Props) {
       <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-4 sm:mt-6">
         <Reveal>
           <p className="pl-1 text-center text-base sm:text-left sm:text-lg leading-8">
-            The <span className="italic">improveu</span> is your destination for<br></br>
+            The <span className="font-bold">improveu</span> is your destination for<br></br>
             self-development and personal growth
           </p>
         </Reveal>
 
 
-        <div className="flex flex-col sm:items-end items-center gap-1 sm:w-full w-[220px]">
+        <div className="flex flex-col sm:items-end items-center gap-2 sm:w-full w-[220px]">
           <Reveal>
             <Image
               src={urlFor(post[0].titleImage).url()}
@@ -55,7 +55,7 @@ export default function Hero({ post }: Props) {
               width={230}
               height={210}
               sizes="(max-width: 425px) 240px, 240px"
-              className="rounded-md cursor-pointer sm:w-[230px] h-[160px] sm:h-[170px] object-contain"
+              className="rounded-md cursor-pointer sm:w-[230px] h-[140px] sm:h-[150px] object-cover"
             /></Reveal>
 
           <Reveal>
@@ -85,7 +85,7 @@ export default function Hero({ post }: Props) {
         </div>
       </Reveal>
 
-      <span className="text-center text-sm md:text-base">( scroll )</span>
+      <span className="text-center text-sm md:text-base mt-2">( scroll )</span>
     </div >
   );
 }
