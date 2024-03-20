@@ -32,7 +32,7 @@ export default async function BlogArticle({
   return (
     <div>
       <div className="mt-8 max-w-4xl w-full mx-auto px-8 lg:px-0">
-        <h1 className="flex flex-col gap-2">
+        <h1 className="flex flex-col gap-4">
           <span className="text-base text-center text-primary font-semibold rounded-lg">
             Self-development
           </span>
