@@ -33,7 +33,7 @@ export default async function BlogArticle({
     <div>
       <div className="mt-8 max-w-4xl w-full mx-auto px-8 lg:px-0">
         <h1 className="flex flex-col gap-4">
-          <span className="text-base text-center text-primary font-semibold rounded-lg">
+          <span className="text-base text-center text-primary font-semibold rounded-lg opacity-70">
             Self-development
           </span>
           <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">

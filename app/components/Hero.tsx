@@ -59,9 +59,9 @@ export default function Hero({ post }: Props) {
           <Reveal>
             <div className="flex flex-col sm:gap-1 items-end">
               <Link href={`/blog/${post[0].currentSlug}`} className="text-base text-center sm:text-left font-semibold text-gray-600 dark:text-gray-400">
-                {post[0].title}
+                {post[0].title.slice(0, 36).concat("...")}
               </Link>
-              <ArrowDownRight className="-mt-2 sm:mt-0 text-gray-600 dark:text-gray-400 cursor-pointer" />
+              <ArrowDownRight className="-mt-4 sm:mt-0 text-gray-600 dark:text-gray-400 cursor-pointer" />
             </div>
           </Reveal>
         </div>
@@ -69,15 +69,16 @@ export default function Hero({ post }: Props) {
 
       <Reveal>
         <div className="px-2">
-          <Marquee speed={30}>
+          <Marquee speed={40}>
             <p className="text-base md:text-lg">
-              Latest post: Feb 21, 2024 -{" "}
+              {/* Latest post: Feb 21, 2024 -{" "}
               <span className="font-bold">
                 {post[0].title} - {" "}
               </span>
               <span className="pr-1">
                 {post[0].description.slice(0, 30).concat("...")}
-              </span>
+              </span> */}
+              . Each new article in every two weeks. Latest article: <span className="font-bold"> {post[0].title}</span>
             </p>
           </Marquee>
         </div>
