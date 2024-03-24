@@ -17,6 +17,15 @@ export default {
             }
         },
         {
+            title: 'Release date',
+            name: 'releaseDate',
+            type: 'date',
+            options: {
+                dateFormat: 'YYYY-MM-DD',
+                calendarTodayLabel: 'Today'
+            }
+        },
+        {
             name: 'titleImage',
             type: 'image',
             title: 'Title Image',
