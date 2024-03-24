@@ -17,8 +17,8 @@ export default {
             }
         },
         {
-            title: 'Release date',
-            name: 'releaseDate',
+            title: 'Published at',
+            name: 'date',
             type: 'date',
             options: {
                 dateFormat: 'YYYY-MM-DD',
@@ -31,10 +31,16 @@ export default {
             title: 'Title Image',
         },
         {
+            name: 'category',
+            type: 'string',
+            title: 'Category',
+        },
+        {
             name: 'description',
             type: 'text',
             title: 'Description',
         },
+
         {
             name: 'content',
             type: 'array',
