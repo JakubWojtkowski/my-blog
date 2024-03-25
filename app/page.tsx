@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import "./globals.css";
 import { ArrowDownRight } from "lucide-react";
+import { convertDateBlog } from "@/lib/convertDateBlog";
 
 export const revalidate = 30;
 
@@ -17,7 +18,9 @@ const fetchData = async () => {
     title, 
       description, 
         "currentSlug": slug.current,
-        titleImage
+        titleImage,
+        category,
+        date,
   }`;
 
   const data = await client.fetch(query);
@@ -51,10 +54,10 @@ export default async function Home() {
             />
             <CardContent className="flex flex-col justify-end gap-1 sm:gap-2 flex-1 p-0">
               <p className="text-base text-gray-600 dark:text-gray-400 font-semibold">
-                Feb 21, 2024
+                {convertDateBlog(post.date)}
               </p>
 
-              <div className="text-xs tracking-wide my-2"><span className="rounded-xl bg-slate-100 text-slate-500 dark:text-slate-400 dark:bg-gray-800 px-2 py-2">mental health</span></div>
+              <div className="text-xs tracking-wide my-2"><span className="rounded-xl bg-slate-100 text-slate-500 dark:text-slate-400 dark:bg-gray-800 px-2 py-2">{post.category}</span></div>
 
               <h3 className="text-2xl font-bold cursor-pointer">
                 {post.title.length >= 36

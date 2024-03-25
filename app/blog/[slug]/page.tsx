@@ -4,8 +4,8 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import "../../globals.css";
 import Footer from "@/app/components/Footer";
-import { Facebook, FacebookIcon, Linkedin, MoveLeft, Twitter, X } from "lucide-react";
-import Link from "next/link";
+import { Facebook, Linkedin } from "lucide-react";
+import { convertDateBlog } from "@/lib/convertDateBlog";
 
 export const revalidate = 30;
 
@@ -13,8 +13,9 @@ async function fetchArticleData(slug: string) {
   const query = `*[_type == "blog" && slug.current == "${slug}"] {
         "currentSlug": slug.current,
         title,
-        content, 
-        titleImage
+        content,
+        date, 
+        titleImage,
       }[0]`;
 
   const data = await client.fetch(query);
@@ -29,6 +30,7 @@ export default async function BlogArticle({
 }) {
   const data: FullBlog = await fetchArticleData(params.slug);
 
+
   return (
     <div>
       <div className="mt-8 max-w-4xl w-full mx-auto px-8 lg:px-0">
@@ -39,8 +41,8 @@ export default async function BlogArticle({
           <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
             {data.title}
           </span>
-          <span className="text-center dark:text-gray-400 text-gray-600">
-            6 mins read
+          <span className="text-center text-sm dark:text-gray-400 text-gray-600 tracking-tight flex gap-2 items-center justify-center">
+            {convertDateBlog(data.date)} <span>•</span> 6 mins read
           </span>
         </h1>
 
@@ -57,7 +59,7 @@ export default async function BlogArticle({
           <div className="flex flex-col gap-1 py-2 sm:basis-40 shrink-0 text-sm md:text-base border-t-2 border-dark dark:border-lightBackground">
             <span className="">Written by</span>
             <span className="font-semibold">@Jakub Wojtkowski</span>
-            <span>Feb 21, 2024</span>
+
           </div>
 
           <div className="prose prose-blue md:prose-xl dark:prose-invert sm:pl-8 lg:pl-16">

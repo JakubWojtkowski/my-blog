@@ -3,6 +3,8 @@ export interface BlogCard {
     description: string;
     titleImage: any;
     currentSlug: string;
+    category: string;
+    date: Date;
 }
 
 export interface FullBlog {
@@ -10,4 +12,6 @@ export interface FullBlog {
     content: any;
     titleImage: any;
     currentSlug: string;
+    category: string;
+    date: Date;
 }
