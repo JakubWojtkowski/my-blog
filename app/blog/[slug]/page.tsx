@@ -14,6 +14,8 @@ async function fetchArticleData(slug: string) {
         "currentSlug": slug.current,
         title,
         content,
+        category,
+        time,
         date, 
         titleImage,
       }[0]`;
@@ -35,14 +37,14 @@ export default async function BlogArticle({
     <div>
       <div className="mt-8 max-w-4xl w-full mx-auto px-8 lg:px-0">
         <h1 className="flex flex-col gap-4">
-          <span className="text-base text-center text-primary font-semibold rounded-lg opacity-70">
-            Self-development
+          <span className="capitalize text-base text-center text-primary font-semibold rounded-lg opacity-70">
+            {data.category}
           </span>
           <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
             {data.title}
           </span>
           <span className="text-center text-sm dark:text-gray-400 text-gray-600 tracking-tight flex gap-2 items-center justify-center">
-            {convertDateBlog(data.date)} <span>•</span> 6 mins read
+            {convertDateBlog(data.date)} <span>•</span> {data.time} mins read
           </span>
         </h1>
 

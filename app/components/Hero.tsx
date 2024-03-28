@@ -69,15 +69,9 @@ export default function Hero({ post }: Props) {
 
       <Reveal>
         <div className="px-2">
-          <Marquee speed={40}>
+          <Marquee speed={30}>
             <p className="text-base md:text-lg">
-              {/* Latest post: Feb 21, 2024 -{" "}
-              <span className="font-bold">
-                {post[0].title} - {" "}
-              </span>
-              <span className="pr-1">
-                {post[0].description.slice(0, 30).concat("...")}
-              </span> */}
+
               . Each new article in every two weeks. Latest article: <span className="font-bold"> {post[0].title}</span>
             </p>
           </Marquee>

@@ -60,9 +60,11 @@ export default async function Home() {
               <div className="text-xs tracking-wide my-2"><span className="rounded-xl bg-slate-100 text-slate-500 dark:text-slate-400 dark:bg-gray-800 px-2 py-2">{post.category}</span></div>
 
               <h3 className="text-2xl font-bold cursor-pointer">
-                {post.title.length >= 36
-                  ? post.title.slice(0, 36).concat("...")
-                  : post.title}
+                <Link href={`/blog/${post.currentSlug}`}>
+                  {post.title.length >= 36
+                    ? post.title.slice(0, 36).concat("...")
+                    : post.title}
+                </Link>
               </h3>
               <Button asChild className="mt-8 flex gap-2 font-semibold bg-darkBackground dark:bg-lightBackground">
                 <Link href={`/blog/${post.currentSlug}`}>

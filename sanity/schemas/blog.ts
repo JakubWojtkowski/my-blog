@@ -17,6 +17,11 @@ export default {
             }
         },
         {
+            name: 'time',
+            type: 'number',
+            title: 'Time of blog article'
+        },
+        {
             title: 'Published at',
             name: 'date',
             type: 'date',

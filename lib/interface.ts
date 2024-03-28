@@ -4,6 +4,7 @@ export interface BlogCard {
     titleImage: any;
     currentSlug: string;
     category: string;
+    time: number;
     date: Date;
 }
 
@@ -13,5 +14,6 @@ export interface FullBlog {
     titleImage: any;
     currentSlug: string;
     category: string;
+    time: number;
     date: Date;
 }
