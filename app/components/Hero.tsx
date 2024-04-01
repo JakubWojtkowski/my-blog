@@ -59,7 +59,7 @@ export default function Hero({ post }: Props) {
           <Reveal>
             <div className="flex flex-col sm:gap-1 items-end">
               <Link href={`/blog/${post[0].currentSlug}`} className="text-base text-center sm:text-left font-semibold text-gray-600 dark:text-gray-400">
-                {post[0].title.slice(0, 36).concat("...")}
+                {post[0].title.slice(0, 48).concat("...")}
               </Link>
               <ArrowDownRight className="-mt-4 sm:mt-0 text-gray-600 dark:text-gray-400 cursor-pointer" />
             </div>
