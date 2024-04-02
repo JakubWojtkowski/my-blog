@@ -79,7 +79,6 @@ export default async function BlogArticle({
 
       </div>
 
-      {/* <Footer /> */}
     </div>
   );
 }
