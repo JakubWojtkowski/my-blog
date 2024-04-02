@@ -2,6 +2,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import Navbar from "./components/Navbar";
 import { Metadata } from 'next';
 import { Roboto } from "@next/font/google";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "improveu",
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main className={roboto.className}>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

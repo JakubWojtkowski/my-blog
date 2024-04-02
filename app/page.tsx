@@ -75,7 +75,7 @@ export default async function Home() {
           </Card>
         ))}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

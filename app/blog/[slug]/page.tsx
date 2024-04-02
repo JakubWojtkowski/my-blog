@@ -79,7 +79,7 @@ export default async function BlogArticle({
 
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
