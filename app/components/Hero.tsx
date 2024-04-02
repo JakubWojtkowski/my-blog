@@ -25,7 +25,7 @@ export default function Hero({ post }: Props) {
   }, []);
 
   return (
-    <div className="sticky left-0 top-0 pt-6 sm:pt-0 -z-10 w-full flex flex-col max-w-4xl mx-auto pb-4 h-full gap-4 sm:gap-8 px-8 lg:px-0">
+    <div className="sticky left-0 top-0 pt-6 sm:pt-0 -z-10 w-full flex flex-col max-w-4xl mx-auto pb-4 h-full gap-4 sm:gap-8 px-8 lg:px-0 z-10">
       <Reveal>
         <div className="py-3">
           <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 z-10">
@@ -37,7 +37,7 @@ export default function Hero({ post }: Props) {
           </h1></div>
       </Reveal>
 
-      <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-4 sm:mt-6">
+      <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 justify-items-center sm:justify-items-stretch mt-4 sm:mt-6 z-[-10]">
         <Reveal>
           <p className="pl-1 text-center text-base sm:text-left sm:text-lg leading-8">
             The <span className="font-bold">improveu</span> is your destination for<br></br>
@@ -57,8 +57,8 @@ export default function Hero({ post }: Props) {
             /></Reveal>
 
           <Reveal>
-            <div className="flex flex-col sm:gap-1 items-end">
-              <Link href={`/blog/${post[0].currentSlug}`} className="text-base text-center sm:text-left font-semibold text-gray-600 dark:text-gray-400">
+            <div className="flex flex-col sm:gap-1 items-end cursor-pointer z-10">
+              <Link href={`/blog/${post[0].currentSlug}`} className="text-base text-center sm:text-left font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-700 hover:dark:text-gray-300 ease-in-out duration-300">
                 {post[0].title.slice(0, 48).concat("...")}
               </Link>
               <ArrowDownRight className="-mt-4 sm:mt-0 text-gray-600 dark:text-gray-400 cursor-pointer" />
