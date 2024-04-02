@@ -32,7 +32,7 @@ export default async function Home() {
   const data: BlogCard[] = await fetchData();
 
   return (
-    <div className="grid grid-cols-1 mt-4 min-h-[100vh] z-0">
+    <div className="grid grid-cols-1 mt-4 min-h-[100vh]">
       <Hero post={data} />
 
       <div className="w-full max-w-4xl mx-auto py-8 px-8 lg:px-0 min-h-[100vh] bg-lightBackground dark:bg-darkBackground border-t-4 rounded z-30">
