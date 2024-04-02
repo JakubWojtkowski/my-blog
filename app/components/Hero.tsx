@@ -25,7 +25,7 @@ export default function Hero({ post }: Props) {
   }, []);
 
   return (
-    <div className="sticky left-0 top-0 pt-6 sm:pt-0 w-full flex flex-col max-w-4xl mx-auto pb-4 gap-4 sm:gap-8 px-8 lg:px-0">
+    <div className="sticky left-0 top-0 pt-6 sm:pt-0 w-full flex flex-col max-w-4xl mx-auto pb-4 gap-4 sm:gap-8 px-8 lg:px-0 z-0">
       <Reveal>
         <div className="py-3">
           <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 relative z-10">
@@ -57,7 +57,7 @@ export default function Hero({ post }: Props) {
             /></Reveal>
 
           <Reveal>
-            <div className="flex flex-col sm:gap-1 items-end cursor-pointer z-10">
+            <div className="flex flex-col sm:gap-1 items-end cursor-pointer relative z-10">
               <Link href={`/blog/${post[0].currentSlug}`} className="text-base text-center sm:text-left font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-700 hover:dark:text-gray-300 ease-in-out duration-300">
                 {post[0].title.slice(0, 48).concat("...")}
               </Link>
