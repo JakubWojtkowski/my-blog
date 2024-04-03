@@ -6,6 +6,8 @@ body {
   --sb-track-color: #232e33;
   --sb-thumb-color: #a8abaa;
   --sb-size: 14px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-overflow-scrolling: auto !important;
 }
 
 body::-webkit-scrollbar {

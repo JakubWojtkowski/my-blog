@@ -27,8 +27,8 @@ export default function Hero({ post }: Props) {
   return (
     <div className="sticky left-0 top-0 pt-6 sm:pt-0 w-full flex flex-col max-w-4xl mx-auto pb-4 gap-4 sm:gap-8 px-8 lg:px-0 z-0">
       <Reveal>
-        <div className="py-3">
-          <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 relative z-10">
+        <div className="py-3 relative">
+          <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 relative">
             Built <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500">yourself</span> today with
             <span className="dark:border-light border-dark tracking-tighter italic">
               {" "}
@@ -45,7 +45,7 @@ export default function Hero({ post }: Props) {
           </p>
         </Reveal>
 
-        <div className="flex flex-col sm:items-end items-center gap-2 sm:w-full w-[220px]">
+        <div className="flex flex-col sm:items-end items-center gap-2 sm:w-full w-[220px] relative">
           <Reveal>
             <Image
               src={urlFor(post[0].titleImage).url()}
@@ -68,7 +68,7 @@ export default function Hero({ post }: Props) {
       </div>
 
       <Reveal>
-        <div className="px-2">
+        <div className="px-2 relative">
           <Marquee speed={30}>
             <p className="text-base md:text-lg">
 

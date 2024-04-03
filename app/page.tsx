@@ -43,7 +43,7 @@ export default async function Home() {
         {data.map((post, index) => (
           <Card
             key={index}
-            className="flex-1 flex flex-col sm:flex-row py-8 gap-8 border-b-2 border-gray-200 dark:border-gray-700 "
+            className="flex-1 flex flex-col sm:flex-row py-8 gap-8 border-b-2 border-gray-200 dark:border-gray-700 relative"
           >
             <Image
               src={urlFor(post.titleImage).url()}
@@ -57,7 +57,7 @@ export default async function Home() {
                 {convertDateBlog(post.date)}
               </p>
 
-              <div className="text-xs tracking-wide my-2"><span className="rounded-xl bg-slate-100 text-slate-500 dark:text-slate-400 dark:bg-gray-800 px-2 py-2">{post.category}</span></div>
+              <div className="text-xs tracking-wide my-2 relative"><span className="rounded-xl bg-slate-100 text-slate-500 dark:text-slate-400 dark:bg-gray-800 px-2 py-2">{post.category}</span></div>
 
               <h3 className="text-2xl font-bold cursor-pointer">
                 <Link href={`/blog/${post.currentSlug}`}>
