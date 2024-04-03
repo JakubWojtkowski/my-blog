@@ -94,6 +94,14 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.customHero {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
+
 @layer base {
   * {
     @apply border-border;
