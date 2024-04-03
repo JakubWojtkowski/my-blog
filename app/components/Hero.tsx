@@ -25,7 +25,7 @@ export default function Hero({ post }: Props) {
   }, []);
 
   return (
-    <div className="customHero left-0 top-0 pt-6 sm:pt-0 w-full flex flex-col max-w-4xl mx-auto pb-4 gap-4 sm:gap-8 px-8 lg:px-0 overflow-hidden">
+    <div className="customHero left-0 top-0 pt-6 sm:pt-0 w-full flex flex-col max-w-4xl mx-auto pb-4 gap-4 sm:gap-8 px-8 lg:px-0 overflow-clip">
       <Reveal>
         <div className="py-3 relative">
           <h1 className="font-bold text-center sm:text-left text-5xl sm:text-7xl md:text-8xl flex-1 relative">
