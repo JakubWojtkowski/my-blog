@@ -62,7 +62,7 @@ export default async function Home() {
               <h3 className="text-2xl font-bold cursor-pointer">
                 <Link href={`/blog/${post.currentSlug}`}>
                   {post.title.length >= 36
-                    ? post.title.slice(0, 36).concat("...")
+                    ? post.title.slice(0, 48).concat("...")
                     : post.title}
                 </Link>
               </h3>
