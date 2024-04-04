@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { Metadata } from 'next';
 import { Roboto } from "@next/font/google";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "improveu",
