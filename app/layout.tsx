@@ -33,6 +33,7 @@ export default function RootLayout({
           <main className={roboto.className}>{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
