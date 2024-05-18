@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 
 export default function Footer() {
   const [localTime, setLocalTime] = useState("");
-
   const updateClock = () => {
     const time = convertDate();
     setLocalTime(time);
   }
+  
 
   useEffect(() => {
     updateClock();
