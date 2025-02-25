@@ -4,16 +4,17 @@ import { Metadata } from 'next';
 import { Roboto } from "@next/font/google";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "improveu",
-  description: "improveu | built yourself today",
+  description: "improveu | build yourself today",
 };
 
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['400', '700'],
-})
+});
 
 export default function RootLayout({
   children,
@@ -22,6 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZSBMEQ515" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0ZSBMEQ515', { page_path: window.location.pathname });
+          `}
+        </Script>
+      </head>
       <body>
         <ThemeProvider
           attribute="class"

@@ -16,8 +16,8 @@ async function fetchArticleData(slug: string) {
         content,
         category,
         time,
-        date, 
-        titleImage,
+        date,
+        titleImage
       }[0]`;
 
   const data = await client.fetch(query);
