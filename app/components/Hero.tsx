@@ -84,7 +84,7 @@ export default function Hero({ post }: Props) {
         <div className="px-2 relative">
           <Marquee speed={30}>
             <p className="text-base md:text-lg">
-              <span >eu · created by Jakub Wojtkowski {"'"}24 ©<i>· improveu · improveu · improveu · improveu · improveu · improveu · improv</i></span>
+              <span >eu · created by Jakub Wojtkowski {"'"}24 © <i>· improveu · improveu · improveu · improveu · improveu · improveu · improv</i></span>
             </p>
           </Marquee>
         </div>
